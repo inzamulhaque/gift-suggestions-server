@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "compile": "tsc",
+    "start": "npm run compile && node ./dist/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,9 +14,11 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "@apollo/server": "^5.4.0",
     "@prisma/adapter-pg": "^7.3.0",
     "@prisma/client": "^7.3.0",
     "dotenv": "^17.2.4",
+    "graphql": "^16.12.0",
     "pg": "^8.18.0",
     "ts-node-dev": "^2.0.0"
   },
@@ -23,5 +28,13 @@
     "prisma": "^7.3.0",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inzamulhaque/gift-suggestions-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/inzamulhaque/gift-suggestions-server/issues"
+  },
+  "homepage": "https://github.com/inzamulhaque/gift-suggestions-server#readme"
 }
