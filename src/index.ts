@@ -1,18 +1,7 @@
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
 import resolvers from "./resolvers/index.js";
-
-const typeDefs = `#graphql
- 
-  type Book {
-    title: String
-    author: String
-  }
- 
-  type Query {
-    books: [Book]
-  }
-`;
+import typeDefs from "./schema.js";
 
 const main = async () => {
   const server = new ApolloServer({
