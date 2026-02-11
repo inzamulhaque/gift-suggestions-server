@@ -1,17 +1,17 @@
-const books = [
+const users = [
   {
     title: "The Awakening",
-    author: "Kate Chopin",
+    name: "Kate Chopin",
   },
   {
     title: "City of Glass",
-    author: "Paul Auster",
+    name: "Paul Auster",
   },
 ];
 
 const resolvers = {
   Query: {
-    books: () => books,
+    users: () => users,
   },
 };
 
