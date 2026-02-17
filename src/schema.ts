@@ -12,6 +12,10 @@ const typeDefs = `#graphql
   type Query {
     users: [User]
   }
+
+  type Mutation {
+    signUp(name: String!, email: String!, password: String): User
+  }
 `;
 
 export default typeDefs;
